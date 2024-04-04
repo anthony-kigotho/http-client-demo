@@ -36,17 +36,17 @@ export class AppComponent implements OnInit {
       }
   });
 
-    // Add a new product
-    const newProduct = {
-      title: 'New Product',
-      body: 'Description of the new product'
+    // Add a new post
+    const newPost = {
+      title: 'New Post',
+      body: 'Description of the new post'
     };
-    this.dataService.addProduct(newProduct).subscribe({
+    this.dataService.addPost(newPost).subscribe({
       next: response => {
-        console.log('Product added successfully:', response)
+        console.log('Post added successfully:', response)
       },
       error: error => {
-        console.error('Error adding product:', error)
+        console.error('Error adding post:', error)
       }
   });
   }

@@ -32,12 +32,12 @@ export class DataService {
     );
   }
 
-  // Method to simulate adding a new product
-  addProduct(newProduct: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/posts`, newProduct).pipe(
+  // Method to simulate adding a new post
+  addPost(newPost: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/posts`, newPost).pipe(
       catchError(error => {
-        console.error('Error adding product:', error);
-        return throwError(()=> new Error('Failed to add product.'));
+        console.error('Error adding post:', error);
+        return throwError(()=> new Error('Failed to add post.'));
       })
     );
   }
